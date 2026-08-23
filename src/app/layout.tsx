@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Noto_Sans_TC, Noto_Serif_TC, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { FAQ_DATA } from "@/data/faq";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import "./globals.css";
 
 const notoSansTC = Noto_Sans_TC({
@@ -113,6 +114,7 @@ export default function RootLayout({
       <body
         className={`${notoSansTC.variable} ${notoSerifTC.variable} ${jetbrainsMono.variable} font-sans-tc antialiased leading-relaxed text-ink`}
       >
+        <ScrollToTop />
         {children}
       </body>
       <Script

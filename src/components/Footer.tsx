@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -57,9 +58,10 @@ export function Footer() {
           <div>
             <h3 className="mb-4 font-bold text-white">新生指南</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#top" className="no-underline transition-colors">回到首頁</a></li>
-              <li><a href="#line" className="no-underline transition-colors">新生 LINE 群</a></li>
-              <li><a href="#food" className="no-underline transition-colors">興大美食地圖</a></li>
+              <li><Link href="/" className="no-underline transition-colors">回到首頁</Link></li>
+              <li><Link href="/calendar/" className="no-underline transition-colors">校務行事曆</Link></li>
+              <li><Link href="/line/" className="no-underline transition-colors">新生 LINE 群</Link></li>
+              <li><Link href="/food/" className="no-underline transition-colors">興大美食地圖</Link></li>
             </ul>
           </div>
           <div>

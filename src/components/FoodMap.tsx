@@ -49,7 +49,7 @@ export function FoodMap() {
   return (
     <section id="food" className="below-fold-section section-rule scroll-mt-24 mx-auto mt-16 max-w-[960px] px-5 pt-12 sm:px-6">
       <div className="mb-1.5 flex items-baseline gap-2.5">
-        <span className="font-mono-jb text-[11px] font-bold tracking-[0.12em] text-seal">03 / NEAR CAMPUS</span>
+        <span className="font-mono-jb text-[11px] font-bold tracking-[0.12em] text-seal">04 / NEAR CAMPUS</span>
         <h2 className="font-serif-tc text-2xl font-black text-pine-deep">
           興大周邊美食地圖
         </h2>

@@ -1,11 +1,18 @@
 interface SearchBarProps {
   value: string;
   onChange: (value: string) => void;
+  onSearch: () => void;
 }
 
-export function SearchBar({ value, onChange }: SearchBarProps) {
+export function SearchBar({ value, onChange, onSearch }: SearchBarProps) {
   return (
-    <div className="search-input relative flex min-h-[60px] items-center rounded-xl px-4 transition-all sm:min-h-[68px] sm:px-5">
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        onSearch();
+      }}
+      className="search-input relative flex min-h-[60px] items-center rounded-xl px-4 transition-all sm:min-h-[68px] sm:px-5"
+    >
       <span className="mr-3 text-lg opacity-60">⌕</span>
       <input
         id="faqSearch"
@@ -27,6 +34,6 @@ export function SearchBar({ value, onChange }: SearchBarProps) {
           ✕
         </button>
       )}
-    </div>
+    </form>
   );
 }

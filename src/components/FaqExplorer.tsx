@@ -54,6 +54,15 @@ export function FaqExplorer() {
 
   const pageCount = Math.ceil(items.length / pageSize);
   const visibleItems = items.slice((page - 1) * pageSize, page * pageSize);
+  const scrollToFaq = () => {
+    const faq = document.getElementById("faq");
+    const header = document.querySelector<HTMLElement>(".site-header");
+    if (!faq) return;
+
+    const headerOffset = (header?.offsetHeight ?? 0) + 12;
+    const top = faq.getBoundingClientRect().top + window.scrollY - headerOffset;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  };
   const updateQuery = (value: string) => {
     setQuery(value);
     setPage(1);
@@ -67,7 +76,7 @@ export function FaqExplorer() {
   const changePage = (nextPage: number) => {
     setPage(nextPage);
     setOpenId(null);
-    document.getElementById("faq")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    requestAnimationFrame(scrollToFaq);
   };
 
   return (
@@ -86,7 +95,7 @@ export function FaqExplorer() {
             輸入兩個詞也可以<br />例如：宿舍 申請
           </span>
         </div>
-        <SearchBar value={query} onChange={updateQuery} />
+        <SearchBar value={query} onChange={updateQuery} onSearch={scrollToFaq} />
         <div className="mt-4 border-t border-line pt-4">
           <CategoryTabs current={board} onChange={updateBoard} />
         </div>
