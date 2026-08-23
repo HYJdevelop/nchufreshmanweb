@@ -22,8 +22,15 @@ export function Footer() {
                 className="rounded-lg"
               />
               <span className="font-mono-jb text-[11px] font-bold tracking-[0.16em] text-[#facc15]">
-                HYJDEVELOP.COM
+                興新手冊 · HYJdevelop
               </span>
+              <Image
+                src="/logo.png"
+                alt="HYJdevelop 標誌"
+                width={20}
+                height={20}
+                className="object-contain"
+              />
             </a>
             <h2 className="font-serif-tc text-2xl font-black text-white sm:text-3xl">
               讓新生更快找到方向。
