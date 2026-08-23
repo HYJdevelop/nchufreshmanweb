@@ -82,6 +82,7 @@ export const CLUBS: Club[] = [
   { name: "東洋劍社", category: "sports", type: "體育性", feature: "劍道（日式劍術）練習與競賽" },
   { name: "騎射協會", category: "sports", type: "體育性", feature: "射箭與馬術等傳統技藝" },
   { name: "合唱團", category: "recreation", type: "音樂/康樂", feature: "多聲部合唱演出，參與校內外音樂會" },
+  { name: "阿卡貝拉社〈Secret Loop神秘迴圈〉", category: "recreation", type: "音樂/康樂", feature: "以人聲取代樂器，練習阿卡貝拉編曲與合唱演出" },
   { name: "弦樂社", category: "recreation", type: "音樂/康樂", feature: "西洋弦樂合奏與個別指導" },
   { name: "國樂社", category: "recreation", type: "音樂/康樂", feature: "中國傳統樂器合奏與國樂推廣" },
   { name: "清韻古箏社", category: "recreation", type: "音樂/康樂", feature: "古箏演奏技法研習" },
