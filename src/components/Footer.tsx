@@ -62,6 +62,7 @@ export function Footer() {
               <li><Link href="/calendar/" className="no-underline transition-colors">校務行事曆</Link></li>
               <li><Link href="/line/" className="no-underline transition-colors">新生 LINE 群</Link></li>
               <li><Link href="/food/" className="no-underline transition-colors">興大美食地圖</Link></li>
+              <li><Link href="/clubs/" className="no-underline transition-colors">社團探索</Link></li>
             </ul>
           </div>
           <div>

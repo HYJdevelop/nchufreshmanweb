@@ -22,7 +22,7 @@ export function Header() {
           </span>
         </span>
       </Link>
-      <nav className="grid w-full grid-cols-3 gap-1.5 sm:flex sm:w-auto sm:gap-2">
+      <nav className="grid w-full grid-cols-2 gap-1.5 sm:flex sm:w-auto sm:gap-2">
         <Link
           href="/"
           className="flex min-h-10 items-center justify-center rounded-lg border border-white/20 px-1.5 py-2 text-center text-[11px] font-bold leading-tight text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5 sm:text-[12px]"
@@ -46,6 +46,12 @@ export function Header() {
           className="flex min-h-10 items-center justify-center rounded-lg border border-white/20 px-1.5 py-2 text-center text-[11px] font-bold leading-tight text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5 sm:text-[12px]"
         >
           🍜 美食地圖
+        </Link>
+        <Link
+          href="/clubs/"
+          className="flex min-h-10 items-center justify-center rounded-lg border border-white/20 px-1.5 py-2 text-center text-[11px] font-bold leading-tight text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5 sm:text-[12px]"
+        >
+          🎭 社團探索
         </Link>
       </nav>
     </header>
