@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="site-header sticky top-0 z-[100] flex min-h-[72px] flex-wrap items-center justify-between gap-3 px-5 py-3.5 sm:px-8">
+    <header className="site-header sticky top-0 z-[100] flex min-h-[72px] flex-wrap items-center justify-between gap-3 sm:px-8">
       <a href="#top" className="flex min-w-0 items-center gap-3 no-underline">
         <Image
           src="/hyj-nchuguide-mark.svg"
@@ -21,22 +21,22 @@ export function Header() {
           </span>
         </span>
       </a>
-      <nav className="flex flex-wrap gap-1.5 sm:gap-2">
+      <nav className="grid w-full grid-cols-3 gap-1.5 sm:flex sm:w-auto sm:gap-2">
         <a
           href="#faq"
-          className="rounded-lg border border-white/20 px-3 py-2 text-[12px] font-bold text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5"
+          className="flex min-h-10 items-center justify-center rounded-lg border border-white/20 px-1.5 py-2 text-center text-[11px] font-bold leading-tight text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5 sm:text-[12px]"
         >
           📖 新生問答
         </a>
         <a
           href="#line"
-          className="rounded-lg border border-white/20 px-3 py-2 text-[12px] font-bold text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5"
+          className="flex min-h-10 items-center justify-center rounded-lg border border-white/20 px-1.5 py-2 text-center text-[11px] font-bold leading-tight text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5 sm:text-[12px]"
         >
           💬 新生 LINE 群
         </a>
         <a
           href="#food"
-          className="rounded-lg border border-white/20 px-3 py-2 text-[12px] font-bold text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5"
+          className="flex min-h-10 items-center justify-center rounded-lg border border-white/20 px-1.5 py-2 text-center text-[11px] font-bold leading-tight text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5 sm:text-[12px]"
         >
           🍜 美食地圖
         </a>

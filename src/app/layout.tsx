@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans_TC, Noto_Serif_TC, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { FAQ_DATA } from "@/data/faq";
@@ -64,6 +64,12 @@ export const metadata: Metadata = {
     icon: "/hyj-nchuguide-mark.svg",
     apple: "/hyj-nchuguide-mark.svg",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

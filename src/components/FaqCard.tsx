@@ -87,7 +87,7 @@ export function FaqCard({ item, index, expanded, onSearchKeyword, onToggle }: Fa
         onClick={() => onToggle(item.id)}
         aria-expanded={expanded}
         aria-controls={`faq-answer-${item.id}`}
-        className="flex w-full items-start gap-4 p-5 text-left"
+        className="flex w-full items-start gap-3 p-4 text-left sm:gap-4 sm:p-5"
       >
         <span className="faq-number font-mono-jb shrink-0 text-xs font-bold text-pine">
           {String(index + 1).padStart(2, "0")}
@@ -113,8 +113,8 @@ export function FaqCard({ item, index, expanded, onSearchKeyword, onToggle }: Fa
       </button>
 
       {expanded && (
-        <div id={`faq-answer-${item.id}`} className="faq-answer px-5 pb-5 pl-14">
-          <div className="answer-copy border-l-2 border-pine/20 pl-4 text-[14px] leading-[1.95] text-ink">
+        <div id={`faq-answer-${item.id}`} className="faq-answer px-4 pb-4 pl-11 sm:px-5 sm:pb-5 sm:pl-14">
+          <div className="answer-copy border-l-2 border-pine/20 pl-3 text-[14px] leading-[1.85] text-ink sm:pl-4 sm:leading-[1.95]">
             {getAnswerBlocks(item.a).map((block, paragraphIndex) => (
               <p
                 key={`${item.id}-paragraph-${paragraphIndex}`}
