@@ -8,11 +8,11 @@ export function Footer() {
         <div className="mb-12 flex flex-col justify-between gap-8 border-b border-white/15 pb-10 sm:flex-row sm:items-end">
           <div>
             <a
-              href="https://www.hyjdevelop.com/"
+              href="https://nchufreshman.hyjdevelop.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="mb-3 inline-flex items-center gap-2 no-underline"
-              aria-label="前往 HYJdevelop 官方網站"
+              aria-label="前往興新手冊"
             >
               <Image
                 src="/hyj-nchuguide-mark.svg"
@@ -22,8 +22,16 @@ export function Footer() {
                 className="rounded-lg"
               />
               <span className="font-mono-jb text-[11px] font-bold tracking-[0.16em] text-[#facc15]">
-                興新手冊 · HYJdevelop
+                興新手冊
               </span>
+            </a>
+            <a
+              href="https://hyjdevelop.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-3 inline-flex items-center gap-2 no-underline"
+              aria-label="前往 HYJdevelop 官方網站"
+            >
               <Image
                 src="/logo.png"
                 alt="HYJdevelop 標誌"
@@ -31,13 +39,16 @@ export function Footer() {
                 height={20}
                 className="object-contain"
               />
+              <span className="font-mono-jb text-[11px] font-bold tracking-[0.16em] text-[#facc15]">
+                HYJdevelop
+              </span>
             </a>
             <h2 className="font-serif-tc text-2xl font-black text-white sm:text-3xl">
               讓新生更快找到方向。
             </h2>
           </div>
           <a
-            href="https://www.hyjdevelop.com/"
+            href="https://hyjdevelop.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/20 px-4 py-2.5 text-sm font-bold no-underline transition-colors hover:border-[#facc15]"
@@ -83,9 +94,9 @@ export function Footer() {
           <div>
             <h3 className="mb-4 font-bold text-white">HYJdevelop</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="https://www.hyjdevelop.com/" target="_blank" rel="noopener noreferrer" className="no-underline transition-colors">官方網站</a></li>
-              <li><a href="https://www.hyjdevelop.com/partner" target="_blank" rel="noopener noreferrer" className="no-underline transition-colors">合作夥伴</a></li>
-              <li><a href="https://www.hyjdevelop.com/privacy" target="_blank" rel="noopener noreferrer" className="no-underline transition-colors">資料與隱私</a></li>
+              <li><a href="https://hyjdevelop.com" target="_blank" rel="noopener noreferrer" className="no-underline transition-colors">官方網站</a></li>
+              <li><a href="https://hyjdevelop.com/partner" target="_blank" rel="noopener noreferrer" className="no-underline transition-colors">合作夥伴</a></li>
+              <li><a href="https://hyjdevelop.com/privacy" target="_blank" rel="noopener noreferrer" className="no-underline transition-colors">資料與隱私</a></li>
             </ul>
           </div>
           <div>
