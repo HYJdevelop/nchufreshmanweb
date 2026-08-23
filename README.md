@@ -4,17 +4,10 @@
 
 正式網站：[nchufreshmen.hyjdevelop.com](https://nchufreshmen.hyjdevelop.com)
 
-## GitHub Pages
-
-本專案已設定 GitHub Actions 自動發布到 GitHub Pages。將專案推送到 GitHub 的 `main` 分支後，Workflow 會自動建立並發布網站。
-
-在 GitHub Repository 的 `Settings > Pages` 將來源設為 `GitHub Actions`。若使用正式網域，請在 DNS 將 `nchufreshmen.hyjdevelop.com` 設為 GitHub Pages 的自訂網域；`public/CNAME` 已預先設定完成。
-
-網站標誌以 HYJdevelop 的藍、黃、紅品牌色構成三條資訊線，搭配勾選符號代表整理資訊、確認答案與新生找到方向；同一標誌也用作瀏覽器網站圖示。
 
 ## 關於興新手冊
 
-「興新手冊」是 HYJdevelop 的社群服務之一，將學長姐的經驗整理成容易查找的生活資訊，陪新生度過報到、選課與適應校園的第一段路。美食清單為社群推薦，店家資訊與營業狀況請以店家最新公告為準。
+「興新手冊」是 HYJdevelop 的作品之一，將學長姐的經驗整理成容易查找的生活資訊，陪新生度過報到、選課與適應校園的第一段路。美食清單為社群推薦，店家資訊與營業狀況請以店家最新公告為準。
 
 這裡不是取代學校公告的官方平台，而是一份更容易閱讀的入學生活指南。涉及日期、費用、資格與校務規定的內容，請最後以國立中興大學及各處室公告為準。
 
@@ -52,7 +45,7 @@ HYJdevelop 致力於科技開發、軟體、網站與社群，透過技術與人
 
 ## 授權
 
-本專案採用 [MIT License](LICENSE)，Copyright © 2025 HYJdevelop。
+本專案採用 [MIT License](LICENSE)，Copyright © 2026 HYJdevelop。
 
 ## 重要提醒
 
