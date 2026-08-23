@@ -4,6 +4,12 @@
 
 正式網站：[nchufreshmen.hyjdevelop.com](https://nchufreshmen.hyjdevelop.com)
 
+## GitHub Pages
+
+本專案已設定 GitHub Actions 自動發布到 GitHub Pages。將專案推送到 GitHub 的 `main` 分支後，Workflow 會自動建立並發布網站。
+
+在 GitHub Repository 的 `Settings > Pages` 將來源設為 `GitHub Actions`。若使用正式網域，請在 DNS 將 `nchufreshmen.hyjdevelop.com` 設為 GitHub Pages 的自訂網域；`public/CNAME` 已預先設定完成。
+
 網站標誌以 HYJdevelop 的藍、黃、紅品牌色構成三條資訊線，搭配勾選符號代表整理資訊、確認答案與新生找到方向；同一標誌也用作瀏覽器網站圖示。
 
 ## 關於興新手冊
