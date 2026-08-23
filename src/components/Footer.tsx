@@ -1,12 +1,29 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer className="site-footer mt-16 px-5 py-12 sm:px-8 sm:py-16">
       <div className="mx-auto max-w-[960px]">
         <div className="mb-12 flex flex-col justify-between gap-8 border-b border-white/15 pb-10 sm:flex-row sm:items-end">
           <div>
-            <p className="mb-3 font-mono-jb text-[11px] font-bold tracking-[0.16em] text-[#facc15]">
-              A HYJDEVELOP COMMUNITY PROJECT
-            </p>
+            <a
+              href="https://www.hyjdevelop.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-3 inline-flex items-center gap-2 no-underline"
+              aria-label="前往 HYJdevelop 官方網站"
+            >
+              <Image
+                src="/hyj-nchuguide-mark.svg"
+                alt=""
+                width={28}
+                height={28}
+                className="rounded-lg"
+              />
+              <span className="font-mono-jb text-[11px] font-bold tracking-[0.16em] text-[#facc15]">
+                HYJDEVELOP.COM
+              </span>
+            </a>
             <h2 className="font-serif-tc text-2xl font-black text-white sm:text-3xl">
               讓新生更快找到方向。
             </h2>

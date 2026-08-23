@@ -13,7 +13,7 @@ export function Hero() {
             <span className="text-[#facc15]">先從這裡開始。</span>
           </h1>
           <p className="max-w-[550px] text-[15px] leading-[1.9] text-white/70 sm:text-base">
-            選課、宿舍、註冊、交通與校園生活，35 則學長姐整理的實用問答，讓你少走一點彎路。
+            選課、宿舍、註冊、交通與校園生活，35則整理的回答，讓你更快熟悉中興。
           </p>
         </div>
         <div className="mt-10 flex flex-wrap gap-3 text-xs font-bold text-white/75">
