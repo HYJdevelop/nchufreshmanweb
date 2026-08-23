@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   title: "HYJdevelop｜興新手冊 | 國立中興大學新生生活與行政指南",
   description:
     "國立中興大學新生指南：搜尋選課、宿舍、註冊繳費、交通、獎助學金與校園生活 FAQ，快速找到學長姐整理的實用解答。",
+  verification: {
+    google: "SUxPDlMSwGiUtKHUCrXT79K10bJS3Z-D_6olqGgIYQQ",
+  },
   keywords: [
     "國立中興大學新生",
     "中興大學新生",

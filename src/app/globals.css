@@ -69,6 +69,18 @@ body {
   padding-left: max(1.25rem, env(safe-area-inset-left));
 }
 
+.mobile-site-navigation {
+  right: max(0.75rem, env(safe-area-inset-right));
+  left: max(0.75rem, env(safe-area-inset-left));
+  width: auto;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 0;
+  border-radius: 0 0 0.75rem 0.75rem;
+  background: var(--pine-deep);
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.2);
+}
+
 #faq {
   scroll-margin-top: calc(72px + env(safe-area-inset-top) + 0.75rem);
 }
@@ -268,5 +280,14 @@ body {
   .site-header {
     padding-right: max(2rem, env(safe-area-inset-right));
     padding-left: max(2rem, env(safe-area-inset-left));
+  }
+
+  .mobile-site-navigation {
+    width: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
   }
 }

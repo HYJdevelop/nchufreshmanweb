@@ -41,7 +41,11 @@ export function Header() {
       </div>
       <nav
         id="site-navigation"
-        className={`${menuOpen ? "flex" : "hidden"} w-full flex-col gap-1.5 sm:flex sm:w-auto sm:flex-row sm:gap-2`}
+        className={`mobile-site-navigation absolute top-full flex w-full flex-col gap-1.5 transition-[opacity,transform] duration-200 ease-out sm:static sm:w-auto sm:flex-row sm:gap-2 sm:opacity-100 sm:transform-none ${
+          menuOpen
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2 opacity-0"
+        }`}
       >
         <Link
           href="/"
