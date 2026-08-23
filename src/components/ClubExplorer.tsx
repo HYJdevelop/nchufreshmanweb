@@ -23,8 +23,10 @@ const CATEGORY_LABELS: Record<ClubCategory | "all", string> = {
 };
 
 export function ClubExplorer() {
+  const pageSize = 10;
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<ClubCategory | "all">("all");
+  const [page, setPage] = useState(1);
 
   const clubs = useMemo(() => {
     const keyword = query.trim().toLocaleLowerCase();
@@ -34,6 +36,26 @@ export function ClubExplorer() {
       return matchesCategory && (!keyword || searchable.includes(keyword));
     });
   }, [category, query]);
+
+  const pageCount = Math.ceil(clubs.length / pageSize);
+  const visibleClubs = clubs.slice((page - 1) * pageSize, page * pageSize);
+  const updateQuery = (value: string) => {
+    setQuery(value);
+    setPage(1);
+  };
+  const updateCategory = (value: ClubCategory | "all") => {
+    setCategory(value);
+    setPage(1);
+  };
+  const changePage = (nextPage: number) => {
+    setPage(nextPage);
+    requestAnimationFrame(() => {
+      document.getElementById("clubs")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
 
   return (
     <main
@@ -60,7 +82,7 @@ export function ClubExplorer() {
           id="clubSearch"
           type="search"
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          onChange={(event) => updateQuery(event.target.value)}
           placeholder="例如：攝影、服務、舞蹈"
           className="min-h-11 w-full rounded-lg border-2 border-line bg-[#fbfcfa] px-3 text-sm text-ink outline-none transition-colors placeholder:text-ink-soft/70 focus:border-pine"
         />
@@ -69,7 +91,7 @@ export function ClubExplorer() {
             <button
               key={item}
               type="button"
-              onClick={() => setCategory(item)}
+              onClick={() => updateCategory(item)}
               aria-pressed={category === item}
               className={`min-h-10 shrink-0 rounded-lg border px-3.5 py-2 text-xs font-bold transition-colors ${
                 category === item
@@ -92,7 +114,7 @@ export function ClubExplorer() {
 
       {clubs.length > 0 ? (
         <div className="grid gap-3 sm:grid-cols-2">
-          {clubs.map((club) => (
+          {visibleClubs.map((club) => (
             <article
               key={club.name}
               className="min-w-0 rounded-xl border border-line bg-white p-4 shadow-[0_5px_0_rgba(15,23,42,0.04)]"
@@ -114,6 +136,30 @@ export function ClubExplorer() {
         <p className="py-12 text-center text-sm text-ink-soft">
           找不到符合條件的社團，請換個關鍵字或清除分類。
         </p>
+      )}
+
+      {pageCount > 1 && (
+        <nav className="mt-6 flex flex-wrap items-center justify-center gap-2" aria-label="社團分頁">
+          <button
+            type="button"
+            onClick={() => changePage(page - 1)}
+            disabled={page === 1}
+            className="min-h-10 rounded-lg border border-line bg-white px-3 py-2 text-xs font-bold text-pine transition-colors hover:border-pine disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            上一頁
+          </button>
+          <span className="px-2 text-xs text-ink-soft" aria-live="polite">
+            第 {page} / {pageCount} 頁
+          </span>
+          <button
+            type="button"
+            onClick={() => changePage(page + 1)}
+            disabled={page === pageCount}
+            className="min-h-10 rounded-lg border border-line bg-white px-3 py-2 text-xs font-bold text-pine transition-colors hover:border-pine disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            下一頁
+          </button>
+        </nav>
       )}
     </main>
   );
