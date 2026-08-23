@@ -1,7 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function Footer() {
+  const pathname = usePathname();
+
+  const handleHomeClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    event.preventDefault();
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="site-footer mt-16 px-5 py-12 sm:px-8 sm:py-16">
       <div className="mx-auto max-w-[960px]">
@@ -58,7 +72,7 @@ export function Footer() {
           <div>
             <h3 className="mb-4 font-bold text-white">新生指南</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="no-underline transition-colors">回到首頁</Link></li>
+              <li><Link href="/" onClick={handleHomeClick} className="no-underline transition-colors">回到首頁</Link></li>
               <li><Link href="/calendar/" className="no-underline transition-colors">校務行事曆</Link></li>
               <li><Link href="/line/" className="no-underline transition-colors">新生 LINE 群</Link></li>
               <li><Link href="/food/" className="no-underline transition-colors">興大美食地圖</Link></li>
@@ -92,7 +106,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/15 pt-5 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 HYJdevelop · 興新手冊</span>
+          <span>© 2026 HYJdevelop</span>
           <span>資訊僅供參考，最新規定請以官方公告為準</span>
         </div>
       </div>
