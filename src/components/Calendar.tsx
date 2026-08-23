@@ -52,25 +52,20 @@ export function Calendar() {
         </ol>
       </div>
 
-      <div className="overflow-hidden rounded-xl border border-line bg-white shadow-sm">
-        <div className="calendar-frame aspect-[4/5] min-h-[420px] w-full sm:aspect-[16/10] sm:min-h-0">
-          <iframe
-            src={`${CALENDAR_URL}#view=FitH`}
-            title="國立中興大學校務行事曆 PDF"
-            className="h-full w-full border-0"
-          />
+      <div className="flex flex-col items-start justify-between gap-4 rounded-xl border border-line bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:p-5">
+        <div>
+          <h3 className="font-serif-tc text-lg font-black text-pine-deep">
+            完整校務行事曆
+          </h3>
+          <p className="mt-1 text-xs leading-relaxed text-ink-soft">
+            點擊按鈕後開啟教務處官方 PDF，再由瀏覽器檢視或下載。
+          </p>
         </div>
-      </div>
-
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-xs leading-relaxed text-ink-soft">
-          官方 PDF 連結已驗證，可開啟原始檔確認完整日期。
-        </p>
         <a
           href={CALENDAR_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-10 items-center rounded-lg bg-pine px-4 py-2 text-xs font-bold text-white no-underline transition-colors hover:bg-pine-deep"
+          className="inline-flex min-h-10 shrink-0 items-center rounded-lg bg-pine px-4 py-2 text-xs font-bold text-white no-underline transition-colors hover:bg-pine-deep"
         >
           開啟完整行事曆 ↗
         </a>
