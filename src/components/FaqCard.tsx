@@ -12,7 +12,10 @@ interface FaqCardProps {
 const OFFICIAL_LINKS = {
   course: [{ label: "教務處", href: "https://oaa.nchu.edu.tw/" }],
   dorm: [
-    { label: "住宿服務", href: "https://dorm.nchu.edu.tw/" },
+    {
+      label: "住宿服務",
+      href: "https://www.osa.nchu.edu.tw/osa/dorm/",
+    },
     { label: "學務處", href: "https://osa.nchu.edu.tw/" },
   ],
   register: [
