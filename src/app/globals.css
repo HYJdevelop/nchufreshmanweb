@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #17201b;
+  --ink-soft: #66736b;
+  --paper: #f5f6f1;
+  --card: #ffffff;
+  --line: #dde4dd;
+  --pine: #2563eb;
+  --pine-deep: #0f172a;
+  --moss: #60a5fa;
+  --moss-pale: #eff6ff;
+  --seal: #ef4444;
+  --seal-pale: #fef2f2;
+  --gold: #facc15;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-pine: var(--pine);
+  --color-pine-deep: var(--pine-deep);
+  --color-moss: var(--moss);
+  --color-moss-pale: var(--moss-pale);
+  --color-seal: var(--seal);
+  --color-seal-pale: var(--seal-pale);
+  --color-gold: var(--gold);
+  --font-serif-tc: var(--font-noto-serif-tc);
+  --font-sans-tc: var(--font-noto-sans-tc);
+  --font-mono-jb: var(--font-jetbrains-mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  background-image: radial-gradient(rgba(37, 99, 235, 0.09) 0.8px, transparent 0.8px);
+  background-size: 18px 18px;
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--seal);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.site-header {
+  background: var(--pine-deep);
+  color: white;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  background: var(--pine-deep);
+  color: white;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  right: -5rem;
+  top: -7rem;
+  width: 20rem;
+  height: 20rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2rem rgba(255, 255, 255, 0.04), 0 0 0 5rem rgba(255, 255, 255, 0.03);
+}
+
+.search-panel {
+  position: relative;
+  z-index: 1;
+  margin: -2rem auto 0;
+  border: 1px solid rgba(13, 53, 43, 0.12);
+  background: var(--card);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+}
+
+.search-input {
+  border: 2px solid var(--line);
+  background: #fbfcfa;
+}
+
+.search-input:focus-within {
+  border-color: var(--pine);
+  box-shadow: 0 0 0 4px rgba(23, 99, 77, 0.1);
+}
+
+.faq-card {
+  min-height: 0;
+  border: 1px solid var(--line);
+  background: var(--card);
+  text-align: left;
+  box-shadow: 0 5px 0 rgba(15, 23, 42, 0.04);
+}
+
+.faq-card:hover {
+  border-color: var(--moss);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+}
+
+.faq-card-expanded {
+  border-color: var(--pine);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.1);
+}
+
+.faq-card button:hover .faq-toggle {
+  background: var(--pine);
+  color: white;
+}
+
+.faq-card-expanded .faq-toggle {
+  transform: rotate(180deg);
+  background: var(--pine);
+  color: white;
+}
+
+.faq-answer {
+  animation: answer-in 0.2s ease-out;
+}
+
+.answer-heading {
+  color: var(--pine-deep);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.answer-step {
+  color: var(--pine-deep);
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.answer-bullet {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.answer-bullet::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 0.78em;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--seal);
+}
+
+.answer-highlight {
+  border-radius: 0.25rem;
+  background: #fef08a;
+  color: var(--pine-deep);
+  padding: 0 0.2rem;
+}
+
+@keyframes answer-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.section-rule {
+  border-top: 1px solid var(--line);
+}
+
+.below-fold-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 700px;
+}
+
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+.site-footer a {
+  color: #cbd5e1;
+}
+
+.site-footer a:hover {
+  color: #facc15;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-reveal {
+  animation: reveal 0.4s ease backwards;
+}
+
+.animate-pop {
+  animation: pop 0.26s cubic-bezier(0.2, 0.7, 0.3, 1.1);
+}
+
+@media (max-width: 640px) {
+  .search-panel {
+    margin-top: -1.25rem;
+  }
+
+  .hero-panel::after {
+    right: -10rem;
+  }
+}
