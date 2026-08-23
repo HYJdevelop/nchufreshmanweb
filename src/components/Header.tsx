@@ -36,7 +36,15 @@ export function Header() {
           aria-label={menuOpen ? "關閉網站選單" : "開啟網站選單"}
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/20 text-xl leading-none text-white transition-colors hover:border-white/60 hover:bg-white/10 sm:hidden"
         >
-          <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
+          {menuOpen ? (
+            <span aria-hidden="true" className="text-2xl font-light leading-none">×</span>
+          ) : (
+            <span aria-hidden="true" className="flex w-5 flex-col gap-1">
+              <span className="h-0.5 w-full rounded-full bg-current" />
+              <span className="h-0.5 w-full rounded-full bg-current" />
+              <span className="h-0.5 w-full rounded-full bg-current" />
+            </span>
+          )}
         </button>
       </div>
       <nav

@@ -70,15 +70,16 @@ body {
 }
 
 .mobile-site-navigation {
+  top: calc(100% + 0.5rem);
   right: max(0.75rem, env(safe-area-inset-right));
   left: max(0.75rem, env(safe-area-inset-left));
   width: auto;
   padding: 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-top: 0;
-  border-radius: 0 0 0.75rem 0.75rem;
-  background: var(--pine-deep);
-  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.2);
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--pine-deep) 97%, transparent);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.28);
+  z-index: 110;
 }
 
 #faq {
@@ -283,6 +284,7 @@ body {
   }
 
   .mobile-site-navigation {
+    top: auto;
     width: auto;
     padding: 0;
     border: 0;
