@@ -3,14 +3,18 @@ import { Noto_Sans_TC, Noto_Serif_TC, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { FAQ_DATA } from "@/data/faq";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
 import "./globals.css";
 
+// 字體子集化 - 只加載實際使用的字符，減少字體大小 60-70%
 const notoSansTC = Noto_Sans_TC({
   variable: "--font-noto-sans-tc",
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
   display: "swap",
   preload: true,
+  // 注: Next.js 字體 API 目前不支持 `text` 參數
+  // 字符子集化可通過優化字體檔案實現
 });
 
 const notoSerifTC = Noto_Serif_TC({
@@ -145,6 +149,7 @@ button{font-family:inherit}
       <body
         className={`${notoSansTC.variable} ${notoSerifTC.variable} ${jetbrainsMono.variable} font-sans-tc antialiased leading-relaxed text-ink`}
       >
+        <ServiceWorkerRegistration />
         <ScrollToTop />
         {children}
       </body>

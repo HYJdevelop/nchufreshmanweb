@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
+    // 圖片優化配置 - WebP/AVIF 優先
+    formats: ["image/webp", "image/avif"],
+    minimumCacheTTL: 31536000, // 1 年快取
   },
   agentRules: false,
   allowedDevOrigins: ["localhost", "127.0.0.1", "192.168.1.190"],

@@ -4,6 +4,8 @@
 
 正式網站：[nchufreshmen.hyjdevelop.com](https://nchufreshmen.hyjdevelop.com)
 
+效能與部署文件：[PERFORMANCE_GUIDE.md](PERFORMANCE_GUIDE.md)
+
 
 ## 關於興新手冊
 
