@@ -120,6 +120,28 @@ export default function RootLayout({
 
   return (
     <html lang="zh-Hant">
+      <head>
+        {/* 預連接到 Google Fonts 減少延遲 */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* DNS 預解析 */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        {/* 內聯關鍵 CSS - 防止渲染阻塞 */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+:root{--ink:#17201b;--paper:#f5f6f1;--pine-deep:#0f172a;--seal:#ef4444;--gold:#facc15}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px+env(safe-area-inset-top)+0.75rem)}
+body{background-color:var(--paper);color:var(--ink);overflow-x:hidden;overflow-wrap:anywhere;margin:0;padding:0;font-family:inherit}
+.hero-panel{position:relative;overflow:hidden;background:var(--pine-deep);color:white;padding:2.5rem 1.25rem}
+.site-header{background:var(--pine-deep);color:white;padding-top:max(0.875rem,env(safe-area-inset-top));padding-right:max(1.25rem,env(safe-area-inset-right));padding-bottom:0.875rem;padding-left:max(1.25rem,env(safe-area-inset-left));position:sticky;top:0;z-index:100;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0.75rem;min-height:72px}
+.search-panel{position:relative;z-index:1;margin:-2rem auto 0;border-radius:1rem;background:white;box-shadow:0 18px 45px rgba(15,23,42,0.14);padding:1rem}
+img{max-width:100%;height:auto;display:block}
+button{font-family:inherit}
+@media(min-width:640px){.hero-panel{padding:5rem 1.5rem}.site-header{padding-right:max(2rem,env(safe-area-inset-right));padding-left:max(2rem,env(safe-area-inset-left))}.search-panel{padding:1.5rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.001ms!important;transition-duration:0.001ms!important}}
+          `
+        }} />
+      </head>
       <body
         className={`${notoSansTC.variable} ${notoSerifTC.variable} ${jetbrainsMono.variable} font-sans-tc antialiased leading-relaxed text-ink`}
       >
@@ -130,6 +152,7 @@ export default function RootLayout({
         id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        strategy="afterInteractive"
       />
     </html>
   );
