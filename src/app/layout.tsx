@@ -9,18 +9,24 @@ const notoSansTC = Noto_Sans_TC({
   variable: "--font-noto-sans-tc",
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
+  display: "swap",
+  preload: true,
 });
 
 const notoSerifTC = Noto_Serif_TC({
   variable: "--font-noto-serif-tc",
   subsets: ["latin"],
   weight: ["600", "700", "900"],
+  display: "swap",
+  preload: true,
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   weight: ["500", "700"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
