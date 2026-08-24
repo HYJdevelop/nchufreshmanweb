@@ -1,13 +1,12 @@
 'use client';
 
-import { useMemo, useCallback, useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { Board } from '@/lib/types';
 import { BOARD_NAMES } from '@/lib/types';
 import { FAQ_DATA } from '@/data/faq';
 import { FaqCard } from './FaqCard';
 import { SearchBar } from './SearchBar';
 import { CategoryTabs } from './CategoryTabs';
-import { VirtualScroll } from './VirtualScroll';
 
 /**
  * FAQ 探索器 - 虛擬滾動版本

@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import { Footer } from "@/components/Footer";
 import { FoodMap } from "@/components/FoodMap";
 import { Header } from "@/components/Header";

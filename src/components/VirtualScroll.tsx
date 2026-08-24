@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo, useCallback, useState } from 'react';
-import type { Board } from '@/lib/types';
 
 interface VirtualScrollProps<T> {
   items: T[];
