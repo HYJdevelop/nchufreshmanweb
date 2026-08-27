@@ -77,6 +77,7 @@ export function Footer() {
               <li><Link href="/line/" className="no-underline transition-colors">新生 LINE 群</Link></li>
               <li><Link href="/food/" className="no-underline transition-colors">興大美食地圖</Link></li>
               <li><Link href="/clubs/" className="no-underline transition-colors">社團探索</Link></li>
+              <li><Link href="/loan/" className="no-underline transition-colors">就學貸款流程</Link></li>
             </ul>
           </div>
           <div>

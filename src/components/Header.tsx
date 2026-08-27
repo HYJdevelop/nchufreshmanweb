@@ -63,6 +63,13 @@ export function Header() {
           ✦ 新生任務
         </Link>
         <Link
+          href="/loan/"
+          onClick={() => setMenuOpen(false)}
+          className="flex min-h-10 items-center justify-center rounded-lg border border-[#facc15]/60 px-1.5 py-2 text-center text-[11px] font-bold leading-tight text-[#facc15] no-underline transition-colors hover:bg-[#facc15]/10 sm:px-3.5 sm:text-[12px]"
+        >
+          💰 就學貸款
+        </Link>
+        <Link
           href="/#faq"
           onClick={() => setMenuOpen(false)}
           className="flex min-h-10 items-center justify-center rounded-lg border border-white/20 px-1.5 py-2 text-center text-[11px] font-bold leading-tight text-white/80 no-underline transition-colors hover:border-white/60 hover:bg-white/10 hover:text-white sm:px-3.5 sm:text-[12px]"
